@@ -1,18 +1,12 @@
 {
-  "main.css": "static/css/main.8ae999af.css",
-  "main.css.map": "static/css/main.8ae999af.css.map",
-  "main.js": "static/js/main.21c60277.js",
-  "main.js.map": "static/js/main.21c60277.js.map",
+  "main.css": "static/css/main.d65d2b79.css",
+  "main.css.map": "static/css/main.d65d2b79.css.map",
+  "main.js": "static/js/main.0e8a1624.js",
+  "main.js.map": "static/js/main.0e8a1624.js.map",
   "static/media/Profile-Picture.png": "static/media/Profile-Picture.80f944c6.png",
-  "static/media/ResumeGraphic.png": "static/media/ResumeGraphic.dae88e7f.png",
+  "static/media/ResumeGraphic.png": "static/media/ResumeGraphic.35602579.png",
   "static/media/ResumeV2.pdf": "static/media/ResumeV2.acbc6281.pdf",
-  "static/media/apollo-graphql-blog.PNG": "static/media/apollo-graphql-blog.5597a762.PNG",
   "static/media/better-bc-housing.PNG": "static/media/better-bc-housing.8c414ccf.PNG",
-  "static/media/github.png": "static/media/github.74f268ab.png",
-  "static/media/gmail.png": "static/media/gmail.44e9b281.png",
-  "static/media/linkedin.png": "static/media/linkedin.b46fee59.png",
-  "static/media/mern-article-manager-desktop.PNG": "static/media/mern-article-manager-desktop.e249b569.PNG",
-  "static/media/writefast1.PNG": "static/media/writefast1.13428839.PNG",
-  "static/media/writefast2.PNG": "static/media/writefast2.4a576fd6.PNG",
-  "static/media/writefast3.PNG": "static/media/writefast3.7ec75e21.PNG"
+  "static/media/rogersblog1.jpg": "static/media/rogersblog1.508083a8.jpg",
+  "static/media/writefast1.jpg": "static/media/writefast1.138de344.jpg"
 }
