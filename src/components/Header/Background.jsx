@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import { viewport } from "constants/viewport";
-import theme from "constants/theme.js";
-import { animationTimings } from "constants/animationTimings";
+import { viewport } from "utils/viewport";
+import theme from "utils/theme.js";
+import { animationTimings } from "utils/animationTimings";
 import FadeIn from "components/generic/FadeIn";
 
 import Cubes from "components/Header/Cubes";
 
-import Logo from "media/bg-logo-foreground.png";
+import Logo from "images/bg-logo-foreground.png";
 
 const StyledHeaderBg = styled.div`
   overflow-x: hidden;
+  overflow-y: hidden;
   z-index: -100;
   position: relative;
   background-color: ${theme.colors.darkblue};

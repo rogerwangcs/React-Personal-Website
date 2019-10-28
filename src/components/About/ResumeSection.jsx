@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import ReactGA from "react-ga";
 
 import styled from "styled-components";
-import { viewport } from "constants/viewport";
-import theme from "constants/theme.js";
+import { viewport } from "utils/viewport";
+import theme from "utils/theme.js";
 
-import ResumeGraphic from "media/ResumeGraphic.png";
+import ResumeGraphic from "images/ResumeGraphic.png";
 import RoundButton from "components/generic/RoundButton";
 
 const ResumeButton = styled.div`

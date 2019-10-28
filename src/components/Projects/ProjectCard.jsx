@@ -1,6 +1,6 @@
 import React from "react";
 
-import { viewport } from "constants/viewport";
+import { viewport } from "utils/viewport";
 import styled from "styled-components";
 import Divider from "components/generic/Divider";
 import RoundButton from "components/generic/RoundButton";

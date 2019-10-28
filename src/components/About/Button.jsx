@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import styled from 'styled-components'
-import theme from 'constants/theme.js'
+import theme from 'utils/theme.js'
 
 const StyledButton = styled.div `
   transition: all 300ms ease-in-out;

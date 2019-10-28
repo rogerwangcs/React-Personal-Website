@@ -8,15 +8,16 @@ import {
 import withTracker from "utils/withTracker";
 
 import Header from "components/Header/Header";
-import Footer from "components/Footer/Footer.js";
+import Footer from "components/Footer/Footer";
 import About from "screens/About";
 import Projects from "screens/Projects";
-import "screens/App.scss";
+import CodeSnippets from "screens/CodeSnippets";
+import PuzzleHelper from "screens/PuzzleHelper";
+import "styles/App.scss";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
   render() {
@@ -35,11 +36,16 @@ class App extends Component {
               path={process.env.PUBLIC_URL + "/projects"}
               component={withTracker(Projects)}
             />
-            {/* <Route
+            <Route
               exact
-              path={process.env.PUBLIC_URL + "/resume"}
-              component={withTracker(ResumeView)}
-            /> */}
+              path={process.env.PUBLIC_URL + "/snippets"}
+              component={withTracker(CodeSnippets)}
+            />
+            <Route
+              exact
+              path={process.env.PUBLIC_URL + "/puzzle"}
+              component={withTracker(PuzzleHelper)}
+            />
             <Redirect
               from={process.env.PUBLIC_URL + "/*"}
               to={process.env.PUBLIC_URL + "/"}

@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { viewport } from "constants/viewport";
+import { viewport } from "utils/viewport";
 
 const StyledPageSection = styled.div`
   background-color: ${props => props.color};

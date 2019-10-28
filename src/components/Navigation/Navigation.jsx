@@ -3,8 +3,8 @@ import { withRouter } from "react-router-dom";
 import { animateScroll } from "react-scroll";
 
 import styled from "styled-components";
-import { viewport } from "constants/viewport";
-import { animationTimings } from "constants/animationTimings";
+import { viewport } from "utils/viewport";
+import { animationTimings } from "utils/animationTimings";
 import FadeIn from "components/generic/FadeIn";
 
 import Menu from "components/Navigation/Menu";

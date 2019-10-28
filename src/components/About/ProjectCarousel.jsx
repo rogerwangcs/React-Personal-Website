@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import styled from "styled-components";
-import { viewport } from "constants/viewport";
+import { viewport } from "utils/viewport";
 
 const SCarousel = styled.div`
   overflow-y: hidden;
+  overflow-x: hidden;
   position: relative;
   height: 350px;
   width: 100%;

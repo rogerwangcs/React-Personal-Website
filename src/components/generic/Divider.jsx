@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import theme from "constants/theme.js";
+import theme from "utils/theme.js";
 
 const Centerer = styled.div`
   display: ${props => (props.centered ? "table" : "block")};

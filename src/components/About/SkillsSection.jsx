@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import { viewport } from "constants/viewport";
-import theme from "constants/theme.js";
+import { viewport } from "utils/viewport";
+import theme from "utils/theme.js";
 
 import Divider from "components/generic/Divider";
 

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import theme from "constants/theme";
-import { viewport } from "constants/viewport";
+import theme from "utils/theme";
+import { viewport } from "utils/viewport";
 
 const ButtonGroup = styled.div`
   white-space: nowrap;

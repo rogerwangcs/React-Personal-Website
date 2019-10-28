@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import theme from "constants/theme.js";
-import { animationTimings } from "constants/animationTimings";
+import theme from "utils/theme.js";
+import { animationTimings } from "utils/animationTimings";
 import FadeIn from "components/generic/FadeIn";
 
-import github from "media/github.png";
-import linkedin from "media/linkedin.png";
-import gmail from "media/gmail.png";
+import github from "images/github.png";
+import linkedin from "images/linkedin.png";
+import gmail from "images/gmail.png";
 
 const StyledSocialButtons = FadeIn.extend`
   position: absolute;

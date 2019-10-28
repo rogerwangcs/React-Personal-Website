@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { animateScroll } from "react-scroll";
 
 import styled from "styled-components";
-import theme from "constants/theme";
+import theme from "utils/theme";
 
 const StyledButton = styled.div`
   display: inline-block;

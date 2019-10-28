@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import theme from "constants/theme.js";
+import theme from "utils/theme.js";
 
 import PageSection from "components/generic/PageSection";
 import Divider from "components/generic/Divider";
 import SummarySection from "components/About/SummarySection";
 import SkillsSection from "components/About/SkillsSection";
-import ProjectsSection from "components/About/ProjectsSection";
+import ProjectsSection from "components/About/ProjectsSection.jsx";
 import ResumeSection from "components/About/ResumeSection";
 
 import { CSSTransition } from "react-transition-group";

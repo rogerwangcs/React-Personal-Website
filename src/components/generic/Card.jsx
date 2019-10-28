@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import theme from "constants/theme";
+import theme from "utils/theme";
 
 const StyledCard = styled.div`
   position: relative;

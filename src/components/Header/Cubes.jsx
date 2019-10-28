@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import styled, { keyframes } from "styled-components";
-import { viewport } from "constants/viewport";
-import theme from "constants/theme";
+import { viewport } from "utils/viewport";
+import theme from "utils/theme";
 
 const cubeAnimation = keyframes`
   0% {

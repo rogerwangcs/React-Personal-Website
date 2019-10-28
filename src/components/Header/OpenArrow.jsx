@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {viewport} from 'constants/viewport';
+import {viewport} from 'utils/viewport';
 import styled from 'styled-components';
 
 import downArrow from 'media/down-arrow.png';

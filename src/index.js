@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import App from "screens/App.js";
+import App from "App";
 
 import ReactGA from "react-ga";
 import registerServiceWorker from "utils/registerServiceWorker";

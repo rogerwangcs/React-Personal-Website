@@ -24,4 +24,4 @@ export default {
   colors
 };
 
-// import theme from 'constants/theme.js';
+// import theme from 'utils/theme.js';

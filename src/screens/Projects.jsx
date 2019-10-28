@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-import theme from "constants/theme";
+import theme from "utils/theme";
 import Divider from "components/generic/Divider";
 import PageSection from "components/generic/PageSection";
 import ProjectCard from "components/Projects/ProjectCard";
 
-import liveSubtitles from "media/live-subtitles.png";
-import writefast1 from "media/writefast1.jpg";
-import apolloBlogImg from "media/rogersblog1.jpg";
-import betterBCHousing from "media/better-bc-housing.PNG";
+import liveSubtitles from "images/live-subtitles.png";
+import writefast1 from "images/writefast1.jpg";
+import apolloBlogImg from "images/rogersblog1.jpg";
+import betterBCHousing from "images/better-bc-housing.png";
 
 const Projects = () => {
   return (

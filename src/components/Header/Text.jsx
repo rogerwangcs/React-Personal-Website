@@ -1,9 +1,9 @@
 import React from "react";
 
 import styled from "styled-components";
-import { viewport } from "constants/viewport.js";
+import { viewport } from "utils/viewport.js";
 import FadeIn from "components/generic/FadeIn";
-import { animationTimings } from "constants/animationTimings";
+import { animationTimings } from "utils/animationTimings";
 
 const StyledText = FadeIn.extend`
   margin-top: -50px;
