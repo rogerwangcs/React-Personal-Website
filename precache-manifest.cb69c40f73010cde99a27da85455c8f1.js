@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cb14ac7f628eca39da5934b6cf246774",
+    "revision": "91721102871c7728edd0b7ee44f59a78",
     "url": "/index.html"
   },
   {
-    "revision": "6b445cb56155522d2392",
-    "url": "/static/css/main.10c04bc6.chunk.css"
+    "revision": "e4b7fa13f2bcd4cd4b4c",
+    "url": "/static/css/main.55383a41.chunk.css"
   },
   {
-    "revision": "8fe70eb4748260a04237",
-    "url": "/static/js/2.8d1efa19.chunk.js"
+    "revision": "851539675f6c5fdfe0aa",
+    "url": "/static/js/2.cf88adf8.chunk.js"
   },
   {
-    "revision": "6b445cb56155522d2392",
-    "url": "/static/js/main.9fe530a1.chunk.js"
+    "revision": "e4b7fa13f2bcd4cd4b4c",
+    "url": "/static/js/main.55b35e71.chunk.js"
   },
   {
     "revision": "212597167309cc210b04",
@@ -29,7 +29,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "8c414ccfa84a788b2aed163bdc8ea7dd",
-    "url": "/static/media/better-bc-housing.8c414ccf.PNG"
+    "url": "/static/media/better-bc-housing.8c414ccf.png"
   },
   {
     "revision": "abd3303b387dcefff9206845995fd045",
