@@ -1968,6 +1968,11 @@ babel-plugin-named-asset-import@^0.3.3:
   resolved "https://registry.yarnpkg.com/babel-plugin-named-asset-import/-/babel-plugin-named-asset-import-0.3.3.tgz#9ba2f3ac4dc78b042651654f07e847adfe50667c"
   integrity sha512-1XDRysF4894BUdMChT+2HHbtJYiO7zx5Be7U6bT8dISy7OdyETMGIAQBMPQCsY1YRf0xcubwnKKaDr5bk15JTA==
 
+babel-plugin-prismjs@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-prismjs/-/babel-plugin-prismjs-1.1.1.tgz#974b2346d6ea8bdb2b16c3fdf1342bbe97fc6f51"
+  integrity sha512-MmwxA//jBpXH0IhJ2FbpBJmd6Bvq5rBe3UD3udUqfkkOdh6lmQeYxoVGpkIvLuuXecrynWjpPqwM0JPxErebpQ==
+
 babel-plugin-syntax-object-rest-spread@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
@@ -3399,6 +3404,11 @@ detect-port-alt@1.1.6:
   dependencies:
     address "^1.0.1"
     debug "^2.6.0"
+
+devicon-react-svg@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/devicon-react-svg/-/devicon-react-svg-0.2.2.tgz#d3c318e7771f985eec7086d60849f78aa29f6e9b"
+  integrity sha512-hUz/KzWdjLoGKv3HQ9MNsSOpKzWRseyEHVQhAYer4cibsYxOWry0btHDpYiNCehTYppeRXrC5I9PLL9JHNkctQ==
 
 diff-sequences@^24.9.0:
   version "24.9.0"
@@ -8373,7 +8383,7 @@ pretty-format@^24.9.0:
     ansi-styles "^3.2.0"
     react-is "^16.8.4"
 
-prismjs@^1.8.4, prismjs@~1.17.0:
+prismjs@^1.17.1, prismjs@^1.8.4, prismjs@~1.17.0:
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.17.1.tgz#e669fcbd4cdd873c35102881c33b14d0d68519be"
   integrity sha512-PrEDJAFdUGbOP6xK/UsfkC5ghJsPJviKgnQOoxaDbBjwc8op68Quupwt1DeAFoG8GImPhiKXAvvsH7wDSLsu1Q==

@@ -52,10 +52,10 @@ const SummarySection = () => {
       <Portrait draggable="false" src={RogerPortrait} />
       <div className="textWrapper">
         <p>
-          <strong>Hey!</strong> 👋
-          <br /> I'm <strong>Roger</strong>, a computer science major at Boston
-          College. I love exploring cutting edge technologies and building cool
-          things with them.
+          <strong>Hey there!</strong> 👋
+          <br /> This is <strong>Roger</strong>! He's passionate in developing
+          beautiful and functional applications for the benefit of others. He's
+          also interested in building machine learning apps!
         </p>
       </div>
     </StyledSummarySection>

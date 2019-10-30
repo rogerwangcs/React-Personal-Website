@@ -58,9 +58,9 @@ class About extends Component {
                 paddingBottom="50"
                 paddingTop="50"
               >
-                <Divider centered={true} big={true}>
-                  <h2>My Tech Stack</h2>
-                </Divider>
+                {/* <Divider centered={true} big={true}>
+                  <h2>Technical Skills</h2>
+                </Divider> */}
                 <SkillsSection />
               </PageSection>
               <PageSection

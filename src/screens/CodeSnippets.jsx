@@ -1,207 +1,143 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import highlight from "react-syntax-highlighter/dist/esm/styles/prism/atom-dark";
+import highlight from "react-syntax-highlighter/dist/esm/styles/prism/vs-dark";
 
 import theme from "utils/theme";
+import { viewport } from "utils/viewport";
 import Divider from "components/generic/Divider";
 import PageSection from "components/generic/PageSection";
 
-const code = `import React, { Component } from "react";
-import PropTypes from "prop-types";
-import utils from "../utils";
-import TimeButton from "../presentational/TimeButton";
-import "../css/tailwind.css";
-import "../css/Stats.css";
-
-const moment = require("moment");
-
-Stats.propTypes = {
-  name: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired
-};
-
-class Stats extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      timeRange: "All Time",
-      orders: null
-    };
-  }
-
-  componentDidMount() {
-    this.getOrders(this.props.id);
-  }
-
-  getOrders = id => {
-    fetch(
-      \`\${
-        utils.API_DOMAIN
-      }/getCompleted?GETerID=\${id}&token=\${localStorage.getItem("token")}\`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        }
-      }
-    )
-      .then(response => {
-        if (response.status === 401) {
-          return [];
-        }
-        return response.json();
-      })
-      .then(data => {
-        data.sort(function(a, b) {
-          return (
-            new Date(b.date_order_completed) - new Date(a.date_order_completed)
-          );
-        });
-        this.setState({ orders: data });
-      });
-  };
-
-  setTimeRange = range => {
-    this.setState({ timeRange: range });
-  };
-
-  // Converts string
-  dayToNum() {
-    let days = 0;
-    if (this.state.timeRange === "Day") {
-      days = 1;
-    } else if (this.state.timeRange === "Week") {
-      days = 7;
-    } else if (this.state.timeRange === "Month") {
-      days = 32;
-    } else {
-      days = 10000000;
-    }
-    return days;
-  }
-
-  calcNumOrders = () => {
-    let orders = this.state.orders;
-
-    const today = new Date();
-    const lastDay = new Date(
-      today.getTime() - this.dayToNum() * 24 * 60 * 60 * 1000
-    );
-
-    orders = orders.filter(function(order) {
-      const orderDate = new Date(order.date_order_completed);
-      return orderDate - lastDay >= 0;
-    });
-
-    return orders.length;
-  };
-
-  calcMoneyEarned() {
-    let orders = this.state.orders;
-
-    const today = new Date();
-    const lastDay = new Date(
-      today.getTime() - this.dayToNum() * 24 * 60 * 60 * 1000
-    );
-
-    orders = orders.filter(function(order) {
-      const orderDate = new Date(order.date_order_completed);
-      return orderDate - lastDay >= 0;
-    });
-    // Calculates a cumulative sum of the property "payout" in the "orders" array
-    const moneyAdder = (sum, order) => sum + parseFloat(order.payout);
-
-    return orders.reduce(moneyAdder, 0).toFixed(2);
-  }
-
-  calcTimeLine = () => {
-    const orders = this.state.orders;
-    const data = [];
-    for (let x = 0; x < orders.length; x += 1) {
-      const date = new Date(orders[x].date_order_completed);
-      data.push({ x: 1, time: moment(date).format("Do") });
-    }
-    return data;
-  };
-
-  render() {
-    if (this.state.orders == null) return <div className="loader m-auto" />;
-    return (
-      <div className="pageContainer">
-        <div className="roundedCardContainer">
-          <h1 className="text-center text-4xlg text-grey-darkest">
-            {this.props.name}
-          </h1>
-          <div className="lightDivider" />
-          <div className="statsContainer text-grey-darkest">
-            <h1>{this.calcNumOrders()}</h1>
-            <h3 className="text-center mb-5 text-grey-darkest">
-              orders delivered
-            </h3>
-            <h2>{this.calcMoneyEarned()}</h2>
-            <h3 className="text-center">money earned</h3>
-          </div>
-          <div className="buttonGroup">
-            <TimeButton
-              value="Day"
-              timeRange={this.state.timeRange}
-              clickFunc={() => this.setTimeRange("Day")}
-            />
-            <TimeButton
-              value="Week"
-              timeRange={this.state.timeRange}
-              clickFunc={() => this.setTimeRange("Week")}
-            />
-            <TimeButton
-              value="Month"
-              timeRange={this.state.timeRange}
-              clickFunc={() => this.setTimeRange("Month")}
-            />
-            <TimeButton
-              value="All Time"
-              timeRange={this.state.timeRange}
-              clickFunc={() => this.setTimeRange("All Time")}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Stats;
-`;
+import snip1 from "components/CodeSnippets/Snippets/snip1.js";
+import snip2 from "components/CodeSnippets/Snippets/snip2.js";
+import snip3 from "components/CodeSnippets/Snippets/snip3.js";
+import snip4 from "components/CodeSnippets/Snippets/snip4.js";
+import snip5 from "components/CodeSnippets/Snippets/snip5.js";
 
 const CodeBlock = styled.div`
   text-align: center;
   margin: auto;
-  width: 80%;
+  width: 90%;
+  font-size: 0.8em;
 
   border-radius: 150px;
+
+  @media (min-width: 860px) {
+    width: 800px;
+  }
 `;
 
-const CodeSnippets = () => {
-  return (
-    <PageSection color={theme.colors.gray2} paddingBottom="50" paddingTop="50">
-      <Divider centered={true} big={true}>
-        <h2>My Code Snippets</h2>
-      </Divider>
+const ButtonGroup = styled.div`
+  width: 90%;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 
-      <CodeBlock>
-        <SyntaxHighlighter
-          language="javascript"
-          showLineNumbers={true}
-          style={highlight}
-          wrapLines={true}
-          lineProps={line => console.log(line)}
-        >
-          {code}
-        </SyntaxHighlighter>
-      </CodeBlock>
-    </PageSection>
-  );
-};
+  @media (min-width: 860px) {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+`;
+
+const CircleButton = styled.div`
+  width: 56px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: ${props =>
+    props.id == props.currentSnippet
+      ? theme.colors.hoverblue
+      : theme.colors.darkblue};
+  color: white;
+  line-height: 56px;
+
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Raleway";
+
+  :hover {
+    background-color: ${theme.colors.hoverblue};
+    cursor: pointer;
+  }
+`;
+
+class CodeSnippets extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentSnippet: 1,
+      snippets: [snip1, snip2, snip3, snip4, snip5]
+    };
+  }
+
+  setSnippet = id => {
+    this.setState({ currentSnippet: id });
+  };
+
+  render() {
+    return (
+      <PageSection
+        color={theme.colors.gray2}
+        paddingBottom="50"
+        paddingTop="50"
+        fullwidth
+      >
+        <Divider centered={true} big={true}>
+          <h2>My Code Snippets</h2>
+        </Divider>
+
+        <ButtonGroup>
+          <CircleButton
+            id={1}
+            currentSnippet={this.state.currentSnippet}
+            onClick={() => this.setSnippet(1)}
+          >
+            1
+          </CircleButton>
+          <CircleButton
+            id={2}
+            currentSnippet={this.state.currentSnippet}
+            onClick={() => this.setSnippet(2)}
+          >
+            2
+          </CircleButton>
+          <CircleButton
+            id={3}
+            currentSnippet={this.state.currentSnippet}
+            onClick={() => this.setSnippet(3)}
+          >
+            3
+          </CircleButton>
+          <CircleButton
+            id={4}
+            currentSnippet={this.state.currentSnippet}
+            onClick={() => this.setSnippet(4)}
+          >
+            4
+          </CircleButton>
+          <CircleButton
+            id={5}
+            currentSnippet={this.state.currentSnippet}
+            onClick={() => this.setSnippet(5)}
+          >
+            5
+          </CircleButton>
+        </ButtonGroup>
+
+        <CodeBlock>
+          <SyntaxHighlighter
+            language="javascript"
+            showLineNumbers={true}
+            style={highlight}
+            wrapLines={true}
+          >
+            {this.state.snippets[this.state.currentSnippet - 1]}
+          </SyntaxHighlighter>
+        </CodeBlock>
+      </PageSection>
+    );
+  }
+}
 
 export default CodeSnippets;

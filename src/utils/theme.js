@@ -7,7 +7,7 @@ const colors = {
   creme: "#f9f9f4",
 
   gray3: "rgb(250, 250, 250)",
-  gray2: "rgb(230, 230, 230)",
+  gray2: "#e6eaed",
   gray1: "rgb(200, 200, 200)",
 
   black1: "rgb(41, 41, 41)",
